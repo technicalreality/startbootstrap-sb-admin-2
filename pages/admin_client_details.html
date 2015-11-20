@@ -153,61 +153,65 @@
         </nav>
 <!-- END HEADER & SIDEBAR NAVIGATION -->
 
-
-
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header">Client Details</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="panel panel-primary">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-table fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>New</div>
-                                </div>
-                            </div>
+                            <a href="admin_clients.html"><button type="button" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to Client List</button></a>
                         </div>
-                        <a href="observations.html">
-                            <div class="panel-footer">
-                                <span class="pull-left">Go to observations</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
                             <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-bar-chart-o fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">3</div>
-                                    <div>Updated: 11/15/2015 05:46:03</div>
-                                </div>
+								<!--<div class="col-lg-3">
+									<img src="http://placehold.it/200x200">
+								</div>-->
+								<div class="col-lg-12">
+									<div class="table-responsive">
+	                                <table class="table table-striped table-bordered table-hover">
+	                                    <tbody>
+	                                        <tr>
+	                                            <td width="20%" style="font-weight:bold;">Client Name:</td>
+	                                            <td width="80%">[value here]</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td width="20%" style="font-weight:bold;">Type:</td>
+	                                            <td>[value here]</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td width="20%" style="font-weight:bold;">Regions:</td>
+	                                            <td>[Region 1]<br/>
+		                                            [Region 2]<br/>
+		                                            [Region 3]
+	                                            </td>
+	                                        </tr>
+	                                    </tbody>
+	                                </table>
+									</div>
+								</div>
                             </div>
+                            <!-- /.row -->
+                            <div class="row">
+								<div class="col-lg-12">
+									<a href="admin_client_details_edit.html">
+										<button type="button" class="btn btn-primary pull-right"><i class="fa fa-pencil"></i> Edit Client</button>
+									</a>
+								</div>
+                            </div>
+                            <!-- /.row -->
                         </div>
-                        <a href="reports.html">
-                            <div class="panel-footer">
-                                <span class="pull-left">Go to reports</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
+                        <!-- /.panel-body -->
                     </div>
+                    <!-- /.panel -->
                 </div>
+                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
 
@@ -226,15 +230,22 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript 
-    <script src="../bower_components/raphael/raphael-min.js"></script>
-    <script src="../bower_components/morrisjs/morris.min.js"></script>
-    <script src="../js/morris-data.js"></script>-->
+    <!-- DataTables JavaScript -->
+    <script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
 </body>
 
 </html>
-
